@@ -18,13 +18,13 @@ about:
       href: mailto:ievysh@sogang.ac.kr
     - icon: CV
       text: CV
-      href: https://Iegor-Vyshnevskyi.github.io/CV_Iegor.pdf
+      href: https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/CV_Iegor.pdf
     - icon: google
       text: Google scholar
       href: https://scholar.google.com/citations?hl=en&user=4Kcp5WoAAAAJ     
     - icon: github
       text: GitHub
-      href: https://github.com/Iegor-Vyshnevskyi
+      href: https://github.com/Iegor-Vy
 ---
 
 ::: {#hero-heading}
