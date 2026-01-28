@@ -1,0 +1,46 @@
+---
+title: ""
+page-layout: article
+format: 
+  html:
+    toc: true
+    html-math-method: katex
+    linestretch: 1
+---
+
+# Publications
+
+## Peer-Reviewed Journal Articles
+
+1. **Vyshnevskyi, I.** and W. Sohn.  
+   [“Central Banks’ Support for Climate Action: A Literature Review and Key Issues.”](https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709)  
+   *Journal of Economic Surveys*, Volume40, Issue1, February 2026.
+
+2. **Vyshnevskyi, I.**, W. Jombo, and W. Sohn.  
+   [“The Clarity of Monetary Policy Communication and Financial Market Volatility in Developing Economies.”](https://linkinghub.elsevier.com/retrieve/pii/S1566014124000165)  
+   *Emerging Markets Review*, Vol. 59, 101121, February 2024.
+
+3. **Vyshnevskyi, I.** and W. Sohn.  
+   [“Nonperforming Loans and Related Lending: Evidence from Ukraine.”](https://www.sciencedirect.com/science/article/abs/pii/S1566014123000742)  
+   *Emerging Markets Review*, 101069, September 2023.
+
+4. W. Sohn and **Vyshnevskyi, I.**  
+   [“The Effect of Supervisory Power and Institutions on Banking Sector Stability in the Post-Crisis Era.”](http://journal.korfin.org/sub/journal_detail.html?m_menu1=s5&m_menu2=s5_1&code=430529)  
+   *Asian Review of Financial Research*, Vol. 36, No. 2, pp. 57–87, May 2023.
+
+5. W. Sohn and **Vyshnevskyi, I.**  
+   [“The Effectiveness of Financial Supervision Frameworks.”](https://articlegateway.com/index.php/JAF/article/view/2743)  
+   *Journal of Accounting & Finance*, Vol. 20(1), January 2020.
+
+6. W. Sohn and **Vyshnevskyi, I.**  
+   [“The 'Twin Peaks' Model of Post-Crisis Banking Supervision.”](https://www.tandfonline.com/doi/abs/10.1080/13504851.2016.1213354)  
+   *Applied Economics Letters*, Vol. 24(8), pp. 571–574, July 2016.
+
+## Working Papers
+
+- W. Sohn and **Vyshnevskyi, I.**  
+  [“Global Post-Crisis Banking Supervision: Supervisory Powers and Institutional Changes in the Banking Sector.”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4150042)  
+  *KDI School of Public Policy & Management Paper No. 22-01.* July 2022.
+
+- **Vyshnevskyi, I.** and W. Sohn.  
+  [“The Impact of Monetary Policy Communication on Financial Market Volatility: Evidence from Emerging Economies.”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4107894) January 2022.

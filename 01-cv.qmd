@@ -1,0 +1,29 @@
+---
+title: "CV"
+page-layout: article
+format: 
+  html:
+    toc: true
+    html-math-method: katex
+    linestretch: 1.7
+---
+
+# Curriculum Vitae
+
+You can view or download my full CV [here](CV_Iegor.pdf).
+
+## Education
+- Ph.D. Student, KDI School of Public Policy and Management (2022)
+- M.A. in Public Policy, KDI School (2014)
+- M.A. in International Economics, KNEU (2009)
+- B.A. in International Economics & Management, KNEU (2008)
+
+## Academic Positions
+- Assistant Professor, Sogang University (Present)
+- Assistant Professor, Woosong University (2022-2024)
+- Research Assistant | Teaching Assistant, KDI School (2020-2022)
+
+## Research Interests
+- Monetary Policy Communication, Central Banking, Banking Supervision
+- Financial Stability, Text-as-Data, Data Science in Economics
+

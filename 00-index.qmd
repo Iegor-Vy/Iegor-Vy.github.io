@@ -1,0 +1,67 @@
+---
+title: "Home"
+image: "new-photo.jpg"
+page-layout: article
+format: 
+  html:
+    toc: true
+    html-math-method: katex
+    linestretch: 1.7
+website:
+  favicon: new-photo.JPG
+  page-footer: "© 2026 Iegor Vyshnevskyi"
+about:
+  id: hero-heading
+  template: trestles
+  #image-shape: round
+  image-width: 12em
+  links:
+    - icon: mailbox
+      text: ievysh@sogang.ac.kr
+      href: mailto:ievysh@sogang.ac.kr
+    - icon: CV
+      text: CV
+      href: https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/CV_Iegor.pdf
+    - icon: google
+      text: Google scholar
+      href: https://scholar.google.com/citations?hl=en&user=4Kcp5WoAAAAJ     
+    - icon: github
+      text: GitHub
+      href: https://github.com/Iegor-Vy
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/iegor-vyshnevskyi-b9743b51/
+---
+
+::: {.hero-heading}
+Welcome! I’m Iegor Vyshnevskyi, Assistant Professor of International Commerce at Sogang University.
+
+I work at the intersection of banking supervision, monetary policy, and data science. My work blends macroeconomic theory, empirical analysis, and advanced statistical methods to better understand financial stability and policy communication.
+
+[📄 Download CV](CV_Iegor.pdf) | [📧 Email](mailto:ievysh@sogang.ac.kr) | [🔗 GitHub](https://github.com/Iegor-Vy)
+:::
+
+---
+
+# About
+
+I am an Assistant Professor of International Commerce at Sogang University, where I teach courses in international economics, macroeconomics, and finance. My academic background includes a Ph.D. in Public Policy with a specialization in banking and central banking from the KDI School of Public Policy and Management.  
+
+Previously, I served as an Assistant Professor of Economics at Woosong University, where I taught economics, research, and data science courses while mentoring students. My research focuses on central banking, financial stability, and banking supervision, with a particular interest in nonperforming loans, monetary policy communication, and sustainable central banking.  
+
+Before transitioning to academia, I worked as a financial analyst at the National Bank of Ukraine, where I conducted financial modeling, risk analysis, and policy development. My expertise includes bank stress testing, financial analysis, and policy development. I have published research in reputable academic journals, contributing to discussions on banking regulation, credit risk, and monetary policy communication.  
+
+Beyond research, I am passionate about integrating data science into economics and finance. I taught students how to apply programming languages such as R and Python to analyze economic and financial data, and promoting data-driven decision-making. I am also actively engaged in bridging the gap between research and policy by developing analytical tools for macroeconomic and financial analysis.
+
+---
+
+# Selected Publications
+
+### [Central Banks’ Support for Climate Action: A Literature Review and Key Issues.](https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709), Journal of Economic Surveys, 2026, **I. Vyshnevskyi**, W. Sohn
+
+
+### [Monetary policy communication.](https://www.sciencedirect.com/science/article/abs/pii/B978044313776100129X?via%3Dihub), Book chapter in: Apergis, Nicholas (ed.) Encyclopedia of Monetary Policy, Financial Markets and Banking. Elsevier. 2025, W. Sohn, **I. Vyshnevskyi**
+
+### [The clarity of monetary policy communication and financial market volatility in developing economies.](https://linkinghub.elsevier.com/retrieve/pii/S1566014124000165), Emerging Markets Review, Vol. 59, 101121, 2024, **I. Vyshnevskyi**, W. Jombo, W. Sohn
+
+### [Nonperforming Loans and Related Lending: Evidence from Ukraine.](https://www.sciencedirect.com/science/article/abs/pii/S1566014123000742), Emerging Markets Review, 101069, 2023, **I. Vyshnevskyi**, W. Sohn

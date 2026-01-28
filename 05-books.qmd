@@ -1,0 +1,20 @@
+---
+title: "Books"
+page-layout: article
+format:
+  html:
+    toc: true
+    linestretch: 1
+---
+
+# Books
+
+## Book Chapters
+
+1. W. Sohn and **Vyshnevskyi, I.**  
+   [“Monetary Policy Communication.”](https://www.sciencedirect.com/science/article/abs/pii/B978044313776100129X?via%3Dihub)  
+   In: Apergis, N. (ed.), *Encyclopedia of Monetary Policy, Financial Markets and Banking*.  
+   Elsevier, 2025.
+
+
+
