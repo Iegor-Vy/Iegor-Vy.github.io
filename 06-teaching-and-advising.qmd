@@ -7,7 +7,7 @@ format:
     linestretch: 1
 ---
 
-# Teaching and Advising
+## Teaching
 
 Throughout my academic career, I have taught courses in economics, macroeconomics, finance, and data science at both undergraduate and graduate levels. My teaching philosophy emphasizes **applied learning**, with a strong focus on equipping students with practical skills in financial modeling, economic policy analysis, and programming for data-driven decision-making.
 

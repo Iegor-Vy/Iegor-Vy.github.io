@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Iegor Vyshnevskyi"
 image: "new-photo.jpg"
 page-layout: article
 format: 
@@ -34,9 +34,9 @@ about:
 ---
 
 ::: {.hero-heading}
-Welcome! I’m Iegor Vyshnevskyi, Assistant Professor of International Commerce at Sogang University.
+Welcome! I’m Iegor Vyshnevskyi, Assistant Professor at Sogang University.
 
-I work at the intersection of banking supervision, monetary policy, and data science. My work blends macroeconomic theory, empirical analysis, and advanced statistical methods to better understand financial stability and policy communication.
+I specialize in central banking, monetary policy communication, and data science. My work integrates macroeconomic theory, empirical analysis, and computational methods to deepen our understanding of financial stability and policy communication.
 
 [📄 Download CV](CV_Iegor.pdf) | [📧 Email](mailto:ievysh@sogang.ac.kr) | [🔗 GitHub](https://github.com/Iegor-Vy)
 :::
@@ -45,23 +45,30 @@ I work at the intersection of banking supervision, monetary policy, and data sci
 
 # About
 
-I am an Assistant Professor of International Commerce at Sogang University, where I teach courses in international economics, macroeconomics, and finance. My academic background includes a Ph.D. in Public Policy with a specialization in banking and central banking from the KDI School of Public Policy and Management.  
+I am currently an Assistant Professor of International Commerce at Sogang University, where I teach courses in international economics, macroeconomics, and finance. I hold a Ph.D. in Public Policy from the KDI School of Public Policy and Management, with a concentration in banking and central banking.
 
-Previously, I served as an Assistant Professor of Economics at Woosong University, where I taught economics, research, and data science courses while mentoring students. My research focuses on central banking, financial stability, and banking supervision, with a particular interest in nonperforming loans, monetary policy communication, and sustainable central banking.  
+My academic and professional journey spans academia, research, and central banking. Prior to Sogang, I taught economics, research methods, and data science at Woosong University. Before transitioning to academia, I worked at the National Bank of Ukraine, focusing on financial modeling, systemic risk assessment, and banking policy development.
 
-Before transitioning to academia, I worked as a financial analyst at the National Bank of Ukraine, where I conducted financial modeling, risk analysis, and policy development. My expertise includes bank stress testing, financial analysis, and policy development. I have published research in reputable academic journals, contributing to discussions on banking regulation, credit risk, and monetary policy communication.  
+My research explores central bank communication, monetary policy transmission, nonperforming loans, and sustainable finance. I aim to bridge research and policy by integrating empirical analysis with real-world challenges in banking and regulation. I’ve published in peer-reviewed journals and contributed to international economic policy discourse.
 
-Beyond research, I am passionate about integrating data science into economics and finance. I taught students how to apply programming languages such as R and Python to analyze economic and financial data, and promoting data-driven decision-making. I am also actively engaged in bridging the gap between research and policy by developing analytical tools for macroeconomic and financial analysis.
+I’m also passionate about using R and Python to promote data-driven decision-making in economics and finance. Through teaching and mentorship, I help students build analytical skills that support both academic inquiry and practical policy implementation.
 
 ---
 
 # Selected Publications
 
-### [Central Banks’ Support for Climate Action: A Literature Review and Key Issues.](https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709), Journal of Economic Surveys, 2026, **I. Vyshnevskyi**, W. Sohn
+- [Central Banks’ Support for Climate Action: A Literature Review and Key Issues.](https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709)
 
+*Journal of Economic Surveys*, 2026. **I. Vyshnevskyi**, W. Sohn
 
-### [Monetary policy communication.](https://www.sciencedirect.com/science/article/abs/pii/B978044313776100129X?via%3Dihub), Book chapter in: Apergis, Nicholas (ed.) Encyclopedia of Monetary Policy, Financial Markets and Banking. Elsevier. 2025, W. Sohn, **I. Vyshnevskyi**
+- [Monetary Policy Communication.](https://www.sciencedirect.com/science/article/abs/pii/B978044313776100129X?via%3Dihub)
 
-### [The clarity of monetary policy communication and financial market volatility in developing economies.](https://linkinghub.elsevier.com/retrieve/pii/S1566014124000165), Emerging Markets Review, Vol. 59, 101121, 2024, **I. Vyshnevskyi**, W. Jombo, W. Sohn
+*In*: Apergis, N. (Ed.), *Encyclopedia of Monetary Policy, Financial Markets and Banking*, Elsevier, 2025. W. Sohn, **I. Vyshnevskyi**
 
-### [Nonperforming Loans and Related Lending: Evidence from Ukraine.](https://www.sciencedirect.com/science/article/abs/pii/S1566014123000742), Emerging Markets Review, 101069, 2023, **I. Vyshnevskyi**, W. Sohn
+- [The Clarity of Monetary Policy Communication and Financial Market Volatility in Developing Economies.](https://linkinghub.elsevier.com/retrieve/pii/S1566014124000165)
+
+*Emerging Markets Review*, 59, 101121, 2024. **I. Vyshnevskyi**, W. Jombo, W. Sohn
+
+- [Nonperforming Loans and Related Lending: Evidence from Ukraine.](https://www.sciencedirect.com/science/article/abs/pii/S1566014123000742)
+*Emerging Markets Review*, 101069, 2023. **I. Vyshnevskyi**, W. Sohn
+

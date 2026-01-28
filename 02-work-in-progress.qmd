@@ -19,9 +19,9 @@ Using high-frequency surprises around monetary policy announcements and a novel 
 The research highlights significant **heterogeneity** across countries and time periods, showing that stronger institutional frameworks allow central banks to steer market expectations more effectively and **buffer spillovers** from global financial conditions.
 
 **Key Contributions:**
-- Estimates the impact of central bank information effects on domestic bond yields, exchange rates, and equity markets.
-- Constructs a novel dataset combining monetary policy communication, financial variables, and global risk indicators.
-- Demonstrates the importance of communication transparency in reducing exposure to external financial shocks.
+  - Estimates the impact of central bank information effects on domestic bond yields, exchange rates, and equity markets.
+  - Constructs a novel dataset combining monetary policy communication, financial variables, and global risk indicators.
+  - Demonstrates the importance of communication transparency in reducing exposure to external financial shocks.
 
 **Poster:**  
 [ASSA/AEA Annual Conference (January 3–5, 2026, Philadelphia, USA)](./10597%20Central%20Bank%20Information%20Effects%20and%20the%20Transmission%20of%20the%20Global%20Financial%20Cycle.pdf)
@@ -35,9 +35,9 @@ The research highlights significant **heterogeneity** across countries and time 
 We introduce the **Global Database for Central Bank Communications (GDCBC)**, analyzing over *6,000+ monetary policy statements* from *50 central banks worldwide*. This database fills a critical research gap by providing the **largest repository of standardized central bank communications**.
 
 **Methodological Contributions:**
-1. Developing standardized text preprocessing pipelines to ensure reproducibility in NLP analysis.
-2. Implementing an integrated framework for training domain-specific language models.
-3. Providing a robust technical architecture for automated data collection, version control, and cloud computing.
+  1. Developing standardized text preprocessing pipelines to ensure reproducibility in NLP analysis.
+  2. Implementing an integrated framework for training domain-specific language models.
+  3. Providing a robust technical architecture for automated data collection, version control, and cloud computing.
 
 Using this dataset, we document significant **narrative convergence** during major economic shocks and identify systematic patterns in **global information effects** across diverse economies.
 

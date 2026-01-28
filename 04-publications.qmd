@@ -41,6 +41,3 @@ format:
 - W. Sohn and **Vyshnevskyi, I.**  
   [“Global Post-Crisis Banking Supervision: Supervisory Powers and Institutional Changes in the Banking Sector.”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4150042)  
   *KDI School of Public Policy & Management Paper No. 22-01.* July 2022.
-
-- **Vyshnevskyi, I.** and W. Sohn.  
-  [“The Impact of Monetary Policy Communication on Financial Market Volatility: Evidence from Emerging Economies.”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4107894) January 2022.

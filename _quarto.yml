@@ -4,7 +4,7 @@ project:
 website:
   title: "Iegor Vyshnevskyi"
   navbar:
-    left:
+    right:
       - file: 00-index.qmd
         text: Home
       - file: 01-cv.qmd
@@ -28,3 +28,4 @@ format:
   html:
     theme: cosmo
     toc: true
+    background: "#076e43"
