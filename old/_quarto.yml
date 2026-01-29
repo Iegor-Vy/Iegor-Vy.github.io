@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: "Iegor Vyshnevskyi"
+  navbar:
+    right:
+      - file: 00-index.qmd
+        text: Home
+      - file: 01-cv.qmd
+        text: CV
+      - file: 02-work-in-progress.qmd
+        text: Work in Progress
+      - file: 03-scholarships-and-awards.qmd
+        text: Scholarships & Awards
+      - file: 04-publications.qmd
+        text: Publications
+      - file: 05-books.qmd
+        text: Books
+      - file: 06-teaching-and-advising.qmd
+        text: Teaching
+      - file: 07-community-building.qmd
+        text: Community
+      - file: 08-personal.qmd
+        text: Personal
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    background: "#076e43"

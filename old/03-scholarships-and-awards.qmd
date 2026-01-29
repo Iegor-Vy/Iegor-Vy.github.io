@@ -1,0 +1,36 @@
+---
+title: "Scholarships and Awards"
+page-layout: article
+format: 
+  html:
+    toc: true
+    html-math-method: katex
+    linestretch: 1.7
+---
+
+## Awards
+
+1. **Student Community Service Award (2022)**, *KDI School of Public Policy and Management*  
+   Awarded in recognition of dedicated service and sustained efforts to promote a strong sense of academic and student community.
+
+2. **Outstanding Employee of the Year (2016)**, *National Bank of Ukraine*  
+   Recognized for exceptional contributions to financial stability and risk assessment, including work on bank stress testing and regulatory improvements aimed at strengthening banking sector resilience.
+
+3. **Best Thesis Award (2014)**, *KDI School of Public Policy and Management*  
+   Awarded for outstanding academic research in the field of banking and financial regulation.
+
+4. **Dean’s List (2013)**, *KDI School of Public Policy and Management*  
+   Two-time recognition for academic excellence and high academic performance.
+
+---
+
+## Scholarships
+
+1. **Global Ambassador Scholarship**, Ph.D. Program  
+   *KDI School of Public Policy and Management*, Academic Years 2020–2022.
+
+2. **Global Ambassador Scholarship**, M.S. Program  
+   *KDI School of Public Policy and Management*, Academic Years 2013–2014.
+
+3. **State Scholarship**, M.S. and B.S. Programs  
+   *Kyiv National Economic University named after Vadym Hetman*, Academic Years 2004–2009.
