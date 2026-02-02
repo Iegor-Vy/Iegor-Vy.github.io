@@ -38,36 +38,29 @@ section.level3 {
   color: #111;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease, filter 0.25s ease;
 }
 
-/* Inactive sections */
+/* Inactive */
 section.level3.inactive {
   opacity: 0.35;
-  transform: scale(0.985);
   filter: blur(0.8px);
+  transform: scale(0.985);
 }
 
-/* Active section */
+/* Active */
 section.level3.active {
   opacity: 1;
-  transform: none;
   filter: none;
-
-  background: #ffffff;
+  transform: none;
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
 }
 
-/* Text clarity enforcement */
-section.level3.active,
-section.level3.active p,
-section.level3.active li,
-section.level3.active a,
-section.level3.active h3,
-section.level3.active h4 {
-  color: #111;
-  text-shadow: none;
-  filter: none;
+/* Force text clarity */
+section.level3.active * {
+  color: #111 !important;
+  text-shadow: none !important;
+  filter: none !important;
 }
 
 .quarto-about-jolla {
@@ -75,12 +68,6 @@ section.level3.active h4 {
   margin: 0 auto 4rem auto;
   padding: 0 1.5rem;
 }
-
-#hero-heading p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
 
 
 
@@ -184,7 +171,7 @@ section.level3.active h4 {
 
 <div class="quarto-about-jolla content">
   <img src="new-photo.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
+  round " style="height: 12em; width: 12em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Iegor Vyshnevskyi</h1>
@@ -859,11 +846,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section.level3");
-
-  // Start with all inactive
-  sections.forEach(s => s.classList.add("inactive"));
 
   const observer = new IntersectionObserver(
     entries => {
@@ -878,14 +862,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    {
-      threshold: 0.45
-    }
+    { threshold: 0.45 }
   );
 
-  sections.forEach(section => observer.observe(section));
+  sections.forEach(section => {
+    section.classList.add("inactive");
+    observer.observe(section);
+  });
 });
 </script>
+
 
 
 
