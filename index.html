@@ -58,6 +58,42 @@ section.level3 > h3 {
 }
 </style>
 
+<style id="card-like-section-styles">
+
+/* ===== Section focus styling ===== */
+section.level3 {
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 14px;
+  padding: 2.5rem 3rem;
+  margin: 4rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* Muted state (non-active sections) */
+section.level3.inactive {
+  opacity: 0.45;
+  transform: scale(0.985);
+  filter: blur(0.3px);
+}
+
+/* Active (focused) section */
+section.level3.active {
+  background: #ffffff;
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+}
+
+/* Improve heading separation */
+section.level3 > h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+</style>
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
