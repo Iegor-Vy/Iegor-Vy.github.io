@@ -23,54 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-
-/* ===== Section cards ===== */
-section.level3 {
-  max-width: 860px;
-  margin: 4rem auto;
-  padding: 2.5rem 3rem;
-
-  background: #ffffff;
-  border-radius: 14px;
-
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
-
-  color: #111;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-
-  transition: opacity 0.25s ease, transform 0.25s ease, filter 0.25s ease;
-}
-
-/* Inactive */
-section.level3.inactive {
-  opacity: 0.35;
-  filter: blur(0.8px);
-  transform: scale(0.985);
-}
-
-/* Active */
-section.level3.active {
-  opacity: 1;
-  filter: none;
-  transform: none;
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
-}
-
-/* Force text clarity */
-section.level3.active * {
-  color: #111 !important;
-  text-shadow: none !important;
-  filter: none !important;
-}
-
-.quarto-about-jolla {
-  max-width: 860px;
-  margin: 0 auto 4rem auto;
-  padding: 0 1.5rem;
-}
-
-
-
 </style>
 
 
@@ -171,7 +123,7 @@ section.level3.active * {
 
 <div class="quarto-about-jolla content">
   <img src="new-photo.jpg" class="about-image
-  round " style="height: 12em; width: 12em;">
+  round " style="height: 15em; width: 15em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Iegor Vyshnevskyi</h1>
@@ -267,7 +219,6 @@ section.level3.active * {
       <li>
         <p>
           <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709">
-          <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709">
             “Central Banks’ Support for Climate Action: A Literature Review and Key Issues.”
           </a>
           <strong>I. Vyshnevskyi</strong> and W. Sohn, 
@@ -361,7 +312,6 @@ section.level3.active * {
 <p>Throughout my academic career, I have taught courses in economics, macroeconomics, finance, and data science at both undergraduate and graduate levels. My teaching philosophy emphasizes applied learning, equipping students with practical skills in financial modeling, economic policy analysis, and programming for data-driven decision-making.</p><ol type="1">
 <p>I have advised and mentored students on research projects, helping them develop strong analytical skills and guiding them in publishing their work. My goal is to foster critical thinking and hands-on problem-solving, preparing students for careers in academia, industry, and policy-making.</p>
 <p>Some of my course materials are available on my <a href='https://github.com/Iegor-Vy'>GitHub page</a>.</p>
-<p>Some of my course materials are available on my <a href='https://github.com/Iegor-Vy'>GitHub page</a>.</p>
 </section>
 <section id="community-building" class="level3">
 <h3 data-anchor-id="community-building">Community Building</h3>
@@ -386,7 +336,6 @@ section.level3.active * {
     <i class="bi bi-google"></i>
      <span class="about-link-text">Google scholar</span>
   </a>
-  <a href="https://github.com/Iegor-Vy" class="about-link" rel="" target="">
   <a href="https://github.com/Iegor-Vy" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
@@ -806,35 +755,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section.level3");
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sections.forEach(s => {
-            s.classList.remove("active");
-            s.classList.add("inactive");
-          });
-          entry.target.classList.add("active");
-          entry.target.classList.remove("inactive");
-        }
-      });
-    },
-    { threshold: 0.45 }
-  );
-
-  sections.forEach(section => {
-    section.classList.add("inactive");
-    observer.observe(section);
-  });
-});
-</script>
-
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -847,12 +767,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <ul>
           <li>
             <a href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/blob/main/index.qmd" class="toc-action">
-            <a href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/blob/main/index.qmd" class="toc-action">
               <i class="bi bi-github"></i> Edit this page
             </a>
           </li>
           <li>
-            <a href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/issues/new" class="toc-action">
             <a href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/issues/new" class="toc-action">
               <i class="bi bi-exclamation-triangle"></i> Report an issue
             </a>
@@ -864,7 +782,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul class="footer-items list-unstyled">
         <li class="nav-item compact">
           <a class="nav-link" href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io">
-          <a class="nav-link" href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io">
             <i class="bi bi-github" role="img"></i> GitHub
           </a>
         </li>
@@ -872,6 +789,8 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
