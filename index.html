@@ -24,60 +24,75 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-/* ===== Section focus styling ===== */
+/* ===== Base section styling (CLEAN by default) ===== */
 section.level3 {
-  background: rgba(255, 255, 255, 0.738);
+  background: #ffffff;
   border-radius: 14px;
   padding: 2.5rem 3rem;
-  margin: 4rem 0;
+  margin: 4rem auto;
+  max-width: 960px;
+
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  transition: all 0.4s ease;
-  backdrop-filter: blur(6px);
-}
+  transition: all 0.35s ease;
 
-/* Muted state (non-active sections) */
-section.level3.inactive {
-  opacity: 0.45;
-  transform: scale(0.985);
-  filter: blur(0.6px);
-  backdrop-filter: blur(6px);
-}
-
-
-/* Active (focused) section */
-section.level3.active {
-  background: #ffffff;
-  opacity: 1;
-  transform: none;
+  /* IMPORTANT: no blur here */
   filter: none;
   backdrop-filter: none;
 
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.16);
-
-  /* text clarity */
   color: #111111;
   text-shadow: none;
 }
 
-section.level3.active,
+/* ===== Inactive sections ONLY ===== */
+section.level3.inactive {
+  opacity: 0.45;
+  transform: scale(0.985);
+
+  filter: blur(1px);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== Active section ===== */
+section.level3.active {
+  background: #ffffff;
+  opacity: 1;
+  transform: none;
+
+  filter: none;
+  backdrop-filter: none;
+
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.18);
+
+  color: #111111;
+  text-shadow: none;
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Force sharp text inside active */
 section.level3.active p,
 section.level3.active li,
 section.level3.active a {
   color: #111111;
   font-weight: 400;
+  text-shadow: none;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Improve heading separation */
+/* Headings */
 section.level3 > h3 {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-section.level3.active {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+/* ===== Hero / About width control ===== */
+.quarto-about-jolla p {
+  line-height: 1.7;
 }
+
+
 
 </style>
 
@@ -182,7 +197,7 @@ section.level3.active {
   round " style="height: 15em; width: 15em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h3 class="title">Iegor Vyshnevskyi</h3>
+<h1 class="title">Iegor Vyshnevskyi</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
