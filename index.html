@@ -49,35 +49,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Navigation */
+/* Navigation - Left Sidebar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
   background-color: var(--primary-color) !important;
-  padding: 1rem 0;
-  box-shadow: var(--shadow-md);
+  padding: 2rem 0;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.navbar .container-fluid {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 1.5rem;
 }
 
 .navbar-brand {
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-collapse {
+  display: block !important;
+}
+
+.navbar-nav {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-item {
+  width: 100%;
 }
 
 .nav-link {
   font-weight: 500;
-  transition: opacity 0.2s ease;
-  padding: 0.5rem 1rem !important;
+  transition: all 0.2s ease;
+  padding: 0.75rem 1rem !important;
+  border-radius: 8px;
+  display: block;
+  text-align: left;
 }
 
-.nav-link:hover {
-  opacity: 0.85;
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  opacity: 1;
 }
 
 /* Main Content Container */
 #quarto-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  margin-left: 280px;
+  padding: 3rem 3rem 3rem 4rem;
 }
 
 /* Profile Section */
@@ -270,6 +310,7 @@ ol li em {
   border-top: 1px solid var(--border-color);
   padding: 3rem 0;
   margin-top: 5rem;
+  margin-left: 280px;
 }
 
 .nav-footer {
@@ -350,18 +391,65 @@ ol li em {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+  }
+  
+  .navbar .container-fluid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    text-align: left;
+  }
+  
+  .navbar-toggler {
+    display: block;
+  }
+  
+  .navbar-collapse {
+    display: none !important;
+    margin-top: 1rem;
+  }
+  
+  .navbar-collapse.show {
+    display: block !important;
+  }
+  
   .navbar-nav {
     padding-top: 1rem;
   }
   
   .nav-link {
-    padding: 0.5rem 0 !important;
+    padding: 0.75rem 1rem !important;
+  }
+  
+  #quarto-content {
+    margin-left: 0;
+    margin-top: 80px;
+    padding: 2rem 1.5rem;
+  }
+  
+  .footer {
+    margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
   #quarto-content {
     padding: 2rem 1rem;
+    margin-top: 80px;
   }
   
   .quarto-about-jolla {
@@ -435,7 +523,7 @@ h3 {
 <body class="nav-fixed">
 
 <!-- Navigation -->
-<header id="quarto-header" class="headroom fixed-top">
+<header id="quarto-header" class="headroom">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html" style="color: white;">Hello, I'm Iegor</a>
@@ -485,7 +573,7 @@ h3 {
         
         <p>Beyond research, I am passionate about integrating data science into economics and finance. I taught students how to apply programming languages such as R and Python to analyze economic and financial data, and promoting data-driven decision-making. I am also actively engaged in bridging the gap between research and policy by developing analytical tools for macroeconomic and financial analysis.</p>
         
-        <p>You can reach me at <a href="mailto:ievysh@sogang.ac.kr">ievysh@sogang.ac.kr</a>. Here is a <a href="./CV_Iegor.pdf">link</a> to my CV.</p>
+        <p>You can reach me at <a href="/cdn-cgi/l/email-protection#cda4a8bbb4bea58dbea2aaaca3aae3acaee3a6bf"><span class="__cf_email__" data-cfemail="deb7bba8a7adb69eadb1b9bfb0b9f0bfbdf0b5ac">[email&#160;protected]</span></a>. Here is a <a href="./CV_Iegor.pdf">link</a> to my CV.</p>
       </div>
 
       <section id="work-in-progress" class="level3">
@@ -626,9 +714,9 @@ h3 {
       <hr class="about-sep">
       
       <div class="about-links">
-        <a href="mailto:ievysh@sogang.ac.kr" class="about-link">
+        <a href="/cdn-cgi/l/email-protection#e58c80939c968da5968a82848b82cb8486cb8e97" class="about-link">
           <i class="bi bi-envelope"></i>
-          <span class="about-link-text">ievysh@sogang.ac.kr</span>
+          <span class="about-link-text"><span class="__cf_email__" data-cfemail="caa3afbcb3b9a28ab9a5adaba4ade4aba9e4a1b8">[email&#160;protected]</span></span>
         </a>
         <a href="https://scholar.google.com/citations?hl=en&user=4Kcp5WoAAAAJ" class="about-link" target="_blank">
           <i class="bi bi-google"></i>
@@ -675,16 +763,3 @@ h3 {
       <ul class="footer-items list-unstyled">
         <li class="nav-item compact">
           <a class="nav-link" href="https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io">
-            <i class="bi bi-github" role="img"></i> GitHub
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
