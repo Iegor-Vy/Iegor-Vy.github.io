@@ -105,16 +105,19 @@ body {
 
 .nav-item {
   width: 100%;
+  margin-bottom: 0;  /* ← ADD THIS LINE */
 }
 
 .nav-link {
   font-weight: 500;
   transition: all 0.2s ease;
-  padding: 0.25rem 1.25rem !important;  /* Very tight spacing */
+  padding: 0.4rem 1.25rem !important;  /* ← Changed from 0.25rem to 0.4rem for better balance */
   border-left: 3px solid transparent;
   display: block;
   font-size: 1rem;
+  line-height: 1.2;  /* ← ADD THIS for tighter line height */
 }
+
 
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -771,6 +774,15 @@ h3 {
               <p><a href="https://www.tandfonline.com/doi/abs/10.1080/13504851.2016.1213354">"The 'Twin Peaks' model of post-crisis banking supervision."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Applied Economics Letters, 24(8), 571-574</em>, Online First in July 2016.</p>
             </li>
           </ol>
+        </section>
+
+        <section id="reviewer-service" class="level3">
+          <h3>Reviewer Service</h3>
+          <p>I serve as a peer reviewer for leading academic journals in economics, finance, and environmental policy, including:</p>
+          <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+            <li>Climate Policy</li>
+            <li>International Review of Economics & Finance</li>
+          </ul>
         </section>
 
         <section id="working-papers" class="level4">
