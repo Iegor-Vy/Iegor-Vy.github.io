@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Hello, I'm Iegor Vyshnevskyi</title>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-color: #076e43;
+  --primary-dark: #055233;
+  --accent-color: #0a9257;
+  --text-dark: #1a1a1a;
+  --text-medium: #4a4a4a;
+  --text-light: #6a6a6a;
+  --bg-light: #fafafa;
+  --bg-section: #ffffff;
+  --border-color: #e5e5e5;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --sidebar-width: 220px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation - Vertical Left Sidebar */
+#quarto-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: var(--primary-color);
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.navbar {
+  background-color: transparent !important;
+  padding: 1.5rem 0 0.5rem; /* ← Change "2rem 0 1rem" to "1.5rem 0 0.5rem" for tighter overall spacing */
+  box-shadow: none;
+  display: block;
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar-brand {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.25rem;  /* ← Reduce this to 0.25rem for less space after "Hello, I'm Iegor" */
+  display: block;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-collapse {
+  display: block !important;
+  flex: 1;
+}
+
+.navbar-nav {
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav-item {
+  width: 100%;
+  margin-bottom: 0;  /* ← ADD THIS LINE */
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.4rem 1.25rem !important;  /* ← Changed from 0.25rem to 0.4rem for better balance */
+  border-left: 3px solid transparent;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;  /* ← ADD THIS for tighter line height */
+}
+
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left-color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left-color: white;
+  font-weight: 600;
+}
+
+/* Main Content Container - Adjust for sidebar */
+#quarto-content {
+  max-width: 1200px;
+  margin-left: var(--sidebar-width);
+  padding: 3rem 3rem 3rem 4rem;
+}
+
+/* Profile Section */
+.quarto-about-jolla {
+  background: var(--bg-section);
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.hero-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-profile {
+  flex: 0 0 auto;
+  text-align: center;
+  max-width: 160px;
+}
+
+.about-image {
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(7, 110, 67, 0.15);
+  border: 4px solid var(--bg-light);
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.hero-caption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.hero-contact {
+  flex: 1 1 auto;
+  min-width: 280px;
+}
+
+.hero-contact h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-contact ul li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.hero-contact ul li i {
+  width: 20px;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.hero-contact ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.hero-contact ul li a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+#hero-heading p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+}
+
+#hero-heading p:last-child {
+  margin-bottom: 0;
+}
+
+#hero-heading a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+#hero-heading a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+/* Section Headings */
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--primary-color);
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+/* Lists */
+ol, ul {
+  margin-bottom: 2rem;
+}
+
+ol li, ul li {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+}
+
+ol li p, ul li p {
+  margin-bottom: 0.5rem;
+}
+
+ol li strong, ul li strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+ol li a, ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+ol li a:hover, ul li a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+ol li em {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Work in Progress Special Sections */
+.level4 {
+  background: var(--bg-section);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.level4 h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.level4 p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+}
+
+.level4 ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.level4 ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* About Links */
+.about-sep {
+  margin: 3rem 0 2rem;
+  border: 0;
+  border-top: 2px solid var(--border-color);
+  opacity: 0.5;
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-light);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.about-link:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-link i {
+  font-size: 1.25rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0;
+  margin-top: 5rem;
+  margin-left: var(--sidebar-width);
+}
+
+.nav-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-footer-left,
+.nav-footer-right {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.nav-footer-left p {
+  margin: 0.25rem 0;
+}
+
+.nav-footer-left a,
+.nav-footer-right a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-footer-left a:hover,
+.nav-footer-right a:hover {
+  text-decoration: underline;
+}
+
+.nav-footer-center .toc-actions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.toc-action {
+  color: var(--text-medium);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.toc-action:hover {
+  color: var(--primary-color);
+}
+
+.footer-items {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-items .nav-item {
+  list-style: none;
+}
+
+.footer-items .nav-link {
+  color: var(--text-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.footer-items .nav-link:hover {
+  color: var(--primary-color);
+  background: transparent !important;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  #quarto-header {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar-brand {
+    padding: 1rem 1.25rem;
+    border-bottom: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+    margin: 0 1.25rem;
+  }
+
+  .navbar-collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.show {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+
+  .nav-link {
+    border-left: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #quarto-content {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+
+  .nav-footer {
+    padding: 0 1rem;
+  }
+  
+  .hero-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-contact {
+    text-align: center;
+  }
+  
+  .hero-contact h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .quarto-about-jolla {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .hero-contact h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+  
+  .level4 {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .about-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .about-link {
+    justify-content: center;
+  }
+  
+  .nav-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .nav-footer-center .toc-actions ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-items {
+    justify-content: center;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quarto-about-jolla {
+  animation: fadeIn 0.6s ease-out;
+}
+
+h3 {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Scrollbar styling for sidebar */
+#quarto-header::-webkit-scrollbar {
+  width: 6px;
+}
+
+#quarto-header::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#quarto-header::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+#quarto-header::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation - Vertical Sidebar -->
+<header id="quarto-header">
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html" style="color: white;">Hello, I'm Iegor</a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="./index.html" style="color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./CV_Iegor.pdf" style="color: white;">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work-in-progress" style="color: white;">Work in Progress</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scholarships-awards" style="color: white;">Scholarships and Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications" style="color: white;">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviewer-service" style="color: white;">Reviewer Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#books" style="color: white;">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching-and-advising" style="color: white;">Teaching and Advising</a></li>
+          <li class="nav-item"><a class="nav-link" href="#community-building" style="color: white;">Community Building</a></li>
+          <li class="nav-item"><a class="nav-link" href="#personal" style="color: white;">Personal</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  <main class="content" id="quarto-document-content">
+
+    <div class="quarto-about-jolla content">
+      
+      <div class="hero-header">
+        <div class="hero-profile">
+          <img src="new-photo.jpg" class="about-image" alt="Iegor Vyshnevskyi">
+          <p class="hero-caption">Trained as an economist, practicing as a data scientist, with a deep interest in central banking.</p>
+        </div>
+
+        <div class="hero-contact">
+          <h2>Iegor Vyshnevskyi</h2>
+          <ul>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:ievysh@sogang.ac.kr">ievysh@sogang.ac.kr</a></li>
+            <li><i class="bi bi-file-earmark-text"></i> <a href="./CV_Iegor.pdf">CV</a></li>
+            <li><i class="bi bi-google"></i> <a href="https://scholar.google.com/citations?hl=en&user=4Kcp5WoAAAAJ" target="_blank">Google Scholar</a></li>
+            <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/iegor-vyshnevskyi-b9743b51/" target="_blank">LinkedIn</a></li>
+            <li><i class="bi bi-github"></i> <a href="https://github.com/Iegor-Vy" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="hero-heading">
+        <p>I am an Assistant Professor of International Commerce at Sogang University, where I teach courses in international economics, macroeconomics, and finance. My academic background includes a Ph.D. in Public Policy with a specialization in <a href="https://archives.kdischool.ac.kr/handle/11125/46582">banking and central banking</a> from the KDI School of Public Policy and Management. Previously, I served as an Assistant Professor of Economics at Woosong University, where I taught economics, research, and data science courses while mentoring students.</p>
+        
+        <p>My research focuses on central banking, financial stability, and banking supervision, with a particular interest in nonperforming loans, monetary policy communication, and sustainable central banking.</p>
+        
+        <p>Before transitioning to academia, I worked as a financial analyst at the National Bank of Ukraine, where I conducted financial modeling, risk analysis, and policy development. My expertise includes bank stress testing, financial analysis, and policy development. I have published research in reputable academic journals, contributing to discussions on banking regulation, credit risk, and monetary policy communication.</p>
+        
+        <p>Beyond research, I am passionate about integrating data science into economics and finance. I taught students how to apply programming languages such as R and Python to analyze economic and financial data, and promoting data-driven decision-making. I am also actively engaged in bridging the gap between research and policy by developing analytical tools for macroeconomic and financial analysis.</p>
+      </div>
+
+      <section id="work-in-progress" class="level3">
+        <h3>Work in Progress</h3>
+        
+        <section id="info-effects-project" class="level4">
+          <h4>Central Bank Information Effects and the Transmission of the Global Financial Cycle</h4>
+          <p><strong>Authors:</strong> Cory Baird, Jonathan Benchimol, Vira Vyshnevska, Iegor Vyshnevskyi, and Wook Sohn</p>
+          
+          <p>This project explores how <strong>central bank communications</strong> influence the transmission of global financial shocks to domestic financial conditions. By identifying and quantifying <strong>central bank information effects</strong> in advanced and emerging markets, the paper investigates their role as a key channel in the <em>global financial cycle</em>.</p>
+          
+          <p>Using high-frequency surprises around monetary policy announcements and a novel text-based measure of central bank information disclosure, the authors find that information effects amplify or dampen the pass-through of global shocks depending on the <strong>clarity, credibility, and independence</strong> of the central bank.</p>
+          
+          <p>The research highlights significant heterogeneity across countries and time periods, showing that stronger institutional frameworks allow central banks to steer market expectations more effectively and buffer spillovers from global financial conditions.</p>
+          
+          <p><strong>Key Contributions:</strong></p>
+          <ul>
+            <li>Estimates the impact of central bank information effects on domestic bond yields, exchange rates, and equity markets.</li>
+            <li>Constructs a novel dataset combining monetary policy communication, financial variables, and global risk indicators.</li>
+            <li>Demonstrates the importance of communication transparency in reducing exposure to external financial shocks.</li>
+          </ul>
+          
+          <p><strong>Poster:</strong> <a href="./10597 Central Bank Information Effects and the Transmission of the Global Financial Cycle.pdf" target="_blank">ASSA/AEA Annual Conference (January 3–5, 2026, Philadelphia, USA)</a></p>
+        </section>
+
+        <section id="gdbc-project" class="level4">
+          <h4>The Global Database for Central Bank Communications</h4>
+          <p><strong>Authors:</strong> Cory Baird, Jonathan Benchimol, Vira Vyshnevska, Iegor Vyshnevskyi, and Wook Sohn</p>
+          
+          <p>We introduce the <strong>Global Database for Central Bank Communications (GDCBC)</strong>, analyzing over <em>6,000+ monetary policy statements</em> from <em>50 central banks worldwide</em>. Our database fills a critical research gap by providing the <em>largest repository of standardized central bank communications</em>. Our methodological contributions include:</p>
+          
+          <ol>
+            <li>Developing standardized text preprocessing pipelines to ensure reproducibility in NLP analysis.</li>
+            <li>Implementing an integrated framework for training domain-specific language models.</li>
+            <li>Providing a robust technical architecture for automated data collection, version control, and cloud computing.</li>
+          </ol>
+          
+          <p>Using this dataset, we document significant <strong>narrative convergence</strong> during major economic shocks and identify systematic patterns in <strong>global information effects</strong> across diverse economies.</p>
+          
+          <p><strong>Presentation:</strong> <a href="./CentralBankText_BIS_Prez.pdf" target="_blank">4th IFC and Bank of Italy Workshop on "Data Science in Central Banking" (February 18-20, 2025, Rome, Italy)</a></p>
+        </section>
+      </section>
+
+      <section id="scholarships-awards" class="level3">
+        <h3>Scholarships and Awards</h3>
+        
+        <section id="awards" class="level4">
+          <h4>Awards</h4>
+          <ol type="1">
+            <li><p><strong>Student Community Service Award (2022), KDI School of Public Policy and Management</strong>, "in recognition of one dedicated service and efforts to promote a sense of community."</p></li>
+            <li><p><strong>Outstanding employee of the year (2016), National Bank of Ukraine</strong>, "recognized for exceptional contributions to financial stability and risk assessment, including bank stress testing and regulatory improvements to enhance banking sector resilience."</p></li>
+            <li><p><strong>Best thesis award, KDI School of Public Policy and Management (2014)</strong>, "recognized for outstanding research in banking."</p></li>
+            <li><p><strong>Two Dean's list recognitions for excellence in studying, KDI School of Public Policy and Management (2013)</strong>, "recognized for academic excellence."</p></li>
+          </ol>
+        </section>
+        
+        <section id="scholarships" class="level4">
+          <h4>Scholarships</h4>
+          <ol type="1">
+            <li><strong>Global Ambassador Scholarship</strong> Ph.D. study, KDI School of Public Policy and Management, AY 2020-2022</li>
+            <li><strong>Global Ambassador Scholarship</strong> M.S. study, KDI School of Public Policy and Management, AY 2013-2014</li>
+            <li><strong>State scholarship</strong> M.S. and B.C. study, Kyiv National Economic University named after Vadym Hetman, AY 2004-2009</li>
+          </ol>
+        </section>
+      </section>
+
+      <section id="publications" class="level3">
+        <h3>Publications</h3>
+
+        <section id="peer-reviewed-journal-articles" class="level4">
+          <h4>Peer-reviewed journal articles</h4>
+          <ol type="1">
+            <li>
+              <p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709">"Central Banks' Support for Climate Action: A Literature Review and Key Issues."</a> <strong>I. Vyshnevskyi</strong> and W. Sohn, <em>Journal of Economic Surveys</em>, Online First in June 2025.</p>
+            </li>
+            <li>
+              <p><a href="https://linkinghub.elsevier.com/retrieve/pii/S1566014124000165">"The clarity of monetary policy communication and financial market volatility in developing economies."</a> <strong>I. Vyshnevskyi</strong>, W. Jombo, and W. Sohn, <em>Emerging Markets Review, Vol. 59, 101121</em>, Online First in February 2024.</p>
+            </li>
+            <li>
+              <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1566014123000742">"Nonperforming Loans and Related Lending: Evidence from Ukraine."</a> <strong>I. Vyshnevskyi</strong> and W. Sohn, <em>Emerging Markets Review, 101069</em>, Online First in September 2023.</p>
+            </li>
+            <li>
+              <p><a href="http://journal.korfin.org/sub/journal_detail.html?m_menu1=s5&m_menu2=s5_1&code=430529">"The Effect of Supervisory Power and Institutions on Banking Sector Stability in the Post-Crisis Era."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Asian Review of Financial Research, Vol. 36, No. 2., pp. 57-87</em>, May 2023.</p>
+            </li>
+            <li>
+              <p><a href="https://articlegateway.com/index.php/JAF/article/view/2743">"The effectiveness of financial supervision frameworks."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Journal of Accounting & Finance (2158-3625), 20(1)</em>, January 2020.</p>
+            </li>
+            <li>
+              <p><a href="https://www.tandfonline.com/doi/abs/10.1080/13504851.2016.1213354">"The 'Twin Peaks' model of post-crisis banking supervision."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Applied Economics Letters, 24(8), 571-574</em>, Online First in July 2016.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="working-papers" class="level4">
+          <h4>Working Papers</h4>
+          <ol type="1">
+            <li>
+              <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4150042">"Global post-crisis banking supervision: supervisory powers and institutional changes in the banking sector."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>KDI School of Pub Policy & Management Paper No. 22-01.</em></p>
+            </li>
+          </ol>
+        </section>
+      </section>
+
+        <section id="reviewer-service" class="level3">
+          <h3>Reviewer Service</h3>
+          <p>I serve as a peer reviewer for leading academic journals in economics, finance, and environmental policy, including:</p>
+          <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+            <li>Climate Policy</li>
+            <li>International Review of Economics & Finance</li>
+          </ul>
+        </section>
+
+      <section id="books" class="level3">
+        <h3>Books</h3>
+        <ol type="1">
+          <li>
+            <p><a href="https://www.sciencedirect.com/science/article/abs/pii/B978044313776100129X?via%3Dihub">"Monetary policy communication."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Book chapter in: Apergis, Nicholas (ed.) Encyclopedia of Monetary Policy, Financial Markets and Banking. Elsevier. 2025.</em></p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="teaching-and-advising" class="level3">
+        <h3>Teaching and Advising</h3>
+        <p>Throughout my academic career, I have taught courses in economics, macroeconomics, finance, and data science at both undergraduate and graduate levels. My teaching philosophy emphasizes applied learning, equipping students with practical skills in financial modeling, economic policy analysis, and programming for data-driven decision-making.</p>
+        
+        <p>I have advised and mentored students on research projects, helping them develop strong analytical skills and guiding them in publishing their work. My goal is to foster critical thinking and hands-on problem-solving, preparing students for careers in academia, industry, and policy-making.</p>
+        
+        <p>Some of my course materials are available on my <a href="https://github.com/Iegor-Vy">GitHub page</a>.</p>
+      </section>
+
+      <section id="community-building" class="level3">
+        <h3>Community Building</h3>
+        <p>I have also contributed to expanding the field of computational social science in South Korea. I served as a Teaching Assistant at the first <a href="https://sicss.io/">the Summer Institute in Computational Social Science</a> (SICSS) in <a href="https://sicss.io/2022/korea/">South Korea</a> (2022, co-hosted by KAIST and KDI School).</p>
+        
+        <p>I am passionate about fostering a strong and engaging community. Throughout my career, I have dedicated my efforts to building inclusive and supportive environments. I was the founder of the KDI School Hapkido Club and co-founder and first head of the Ph.D. Club. Additionally, I have contributed to training children in Hapkido at my school, promoting both discipline and teamwork among young learners.</p>
+      </section>
+
+      <section id="personal" class="level3">
+        <h3>Personal</h3>
+        <p>My journey has taken me through academia, public service, and financial institutions, always driven by the belief that banking and finance should serve the greater good both locally and globally. My career started in financial analysis and policy development, where I worked at the National Bank of Ukraine, contributing to financial stability and risk assessment. My academic path led me to the KDI School of Public Policy and Management, where I deepened my expertise in research and policy analysis.</p>
+        
+        <p>After completing my Ph.D. in Public Policy, I transitioned into academia, teaching economics, finance, and data science. I have been privileged to mentor students, guiding them in developing analytical skills that can shape impactful economic and financial policies. I remain committed to bridging the gap between research, policy, and practical applications, always seeking ways to use financial tools for social and economic development.</p>
+        
+        <p>Throughout my life, my greatest fortune has been meeting extraordinary people who have shaped my path. I am where I am today thanks to the endless support of my loving family—my incredible wife and daughter—whose care and encouragement inspire me every day. I am also deeply grateful for the sacrifices and unwavering support of my parents, relatives, friends, and mentors who have guided me at every step. Their belief in me has fueled my passion for education, research, and using finance as a force for good.</p>
+      </section>
+
+      <hr class="about-sep">
+      
+      <div class="about-links">
+        <a href="mailto:ievysh@sogang.ac.kr" class="about-link">
+          <i class="bi bi-envelope"></i>
+          <span class="about-link-text">ievysh@sogang.ac.kr</span>
+        </a>
+        <a href="https://scholar.google.com/citations?hl=en&user=4Kcp5WoAAAAJ" class="about-link" target="_blank">
+          <i class="bi bi-google"></i>
+          <span class="about-link-text">Google Scholar</span>
+        </a>
+        <a href="https://github.com/Iegor-Vy" class="about-link" target="_blank">
+          <i class="bi bi-github"></i>
+          <span class="about-link-text">Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/iegor-vyshnevskyi-b9743b51/" class="about-link" target="_blank">
+          <i class="bi bi-linkedin"></i>
+          <span class="about-link-text">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
