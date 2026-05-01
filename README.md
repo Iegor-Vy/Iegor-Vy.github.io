@@ -1,2 +1,2 @@
-# Iegor-Vyshnevskyi.github.io
+# Iegor-Vy.github.io
 My personal website
