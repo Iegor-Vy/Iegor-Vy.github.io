@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Conferences | Iegor Vyshnevskyi</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-color: #076e43;
+  --accent-color: #0a9257;
+  --text-dark: #1a1a1a;
+  --bg-light: #fafafa;
+  --bg-section: #ffffff;
+  --border-color: #e5e5e5;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --sidebar-width: 220px;
+}
+* { box-sizing: border-box; }
+body { font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); background: var(--bg-light); margin: 0; }
+#quarto-header { position: fixed; left: 0; top: 0; height: 100vh; width: var(--sidebar-width); background: var(--primary-color); box-shadow: 4px 0 16px rgba(0,0,0,0.1); overflow-y: auto; z-index: 1000; }
+.navbar { background: transparent !important; padding: 1.5rem 0 0.5rem; height: 100%; }
+.container-fluid { padding: 0; display: flex; flex-direction: column; height: 100%; }
+.navbar-brand { font-family: 'Merriweather', serif; font-weight: 700; font-size: 1.25rem; padding: 0 1.25rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.2); margin-bottom: 0.25rem; display: block; }
+.navbar-toggler { display: none; }
+.navbar-collapse { display: block !important; flex: 1; }
+.navbar-nav { flex-direction: column; padding: 0; }
+.nav-item { width: 100%; }
+.nav-link { padding: 0.4rem 1.25rem !important; border-left: 3px solid transparent; display: block; }
+.nav-link:hover { background: rgba(255,255,255,0.1); }
+.nav-link.active { background: rgba(255,255,255,0.15); border-left-color: #fff; }
+#quarto-content { max-width: 1200px; margin-left: var(--sidebar-width); padding: 3rem 3rem 3rem 4rem; }
+.quarto-about-jolla { background: var(--bg-section); border-radius: 16px; padding: 3.5rem 3rem; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
+h3 { font-family: 'Merriweather', serif; font-size: 1.75rem; margin-top: 0; margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 3px solid var(--primary-color); }
+h4 { font-family: 'Merriweather', serif; margin-top: 0; }
+.level4 { background: var(--bg-section); border-radius: 12px; padding: 2rem 2.5rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-color); box-shadow: var(--shadow-sm); }
+.footer { background: var(--bg-section); border-top: 1px solid var(--border-color); padding: 2rem 0; margin-left: var(--sidebar-width); }
+.nav-footer { max-width: 1200px; margin: 0 auto; padding: 0 3rem 0 4rem; }
+@media (max-width: 992px) {
+  :root { --sidebar-width: 0px; }
+  #quarto-header { width: 100%; height: auto; position: relative; }
+  .navbar-toggler { display: block; margin: 0 1.25rem; }
+  .navbar-collapse { display: none !important; }
+  .navbar-collapse.show { display: block !important; }
+  #quarto-content { margin-left: 0; padding: 2rem 1rem; }
+  .footer { margin-left: 0; }
+  .nav-footer { padding: 0 1rem; }
+}
+</style>
+</head>
+<body>
+<div style="background-color: #f0f0f0; padding: 8px 16px; text-align: center; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+  <span style="font-weight: 600; color: #1a1a1a;">#StandWithUkraine</span>
+  <a href="https://savelife.in.ua/en/donate-en/" target="_blank" rel="noopener noreferrer" style="background-color: #0057b7; color: #ffd700; border: none; padding: 5px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.88rem; white-space: nowrap;">Donate to support Ukraine</a>
+</div>
+<header id="quarto-header">
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html" style="color: white;">Hello, I'm Iegor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./index.html" style="color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./CV_Iegor.pdf" style="color: white;">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#work-in-progress" style="color: white;">Work in Progress</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#scholarships-awards" style="color: white;">Scholarships and Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="./publications.html" style="color: white;">Publications</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./conferences.html" style="color: white;">Conferences and Presentations</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#data" style="color: white;">Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#reviewer-service" style="color: white;">Reviewer Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="./teaching.html" style="color: white;">Teaching and Advising</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#community-building" style="color: white;">Community Building</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#personal" style="color: white;">Personal</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  <main class="content" id="quarto-document-content">
+    <div class="quarto-about-jolla content">
+      <section class="level3">
+        <h3>Conferences and Presentations</h3>
+        <section class="level4">
+          <h4>CEBRA 2026 Annual Meeting</h4>
+          <p><strong>Monetary Policy Communication in Times of War and Political Turmoil: Evidence from Emerging and Developing Economies</strong>, presented by Iegor Vyshnevskyi at the CEBRA 2026 Annual Meeting (Bank of Korea section, Central Bank Communication; Track E: Monetary Policy in Open Economies, Data and Communication), 23/06/2026, 09:00 CEST.</p>
+        </section>
+        <section class="level4">
+          <h4>Asian Development Bank Conference</h4>
+          <p><strong>"Central Banks Support for Climate Action"</strong>, presented at the Asian Development Bank conference <em>Building a Sustainable Future: Integrating Climate Actions into Fiscal Framework and Public Financial Management Systems</em>, November 15-16, 2023, by W. Sohn and I. Vyshnevskyi.</p>
+        </section>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="nav-footer">
+    <p>&copy; 2026, Iegor Vyshnevskyi</p>
+    <p><a href="./index.html">Back to homepage</a></p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

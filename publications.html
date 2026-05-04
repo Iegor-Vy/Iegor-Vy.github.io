@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Publications | Iegor Vyshnevskyi</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-color: #076e43;
+  --accent-color: #0a9257;
+  --text-dark: #1a1a1a;
+  --text-medium: #4a4a4a;
+  --text-light: #6a6a6a;
+  --bg-light: #fafafa;
+  --bg-section: #ffffff;
+  --border-color: #e5e5e5;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --sidebar-width: 220px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+}
+#quarto-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: var(--primary-color);
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+}
+.navbar { background-color: transparent !important; padding: 1.5rem 0 0.5rem; box-shadow: none; display: block; height: 100%; }
+.container-fluid { padding: 0; display: flex; flex-direction: column; height: 100%; }
+.navbar-brand {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.navbar-toggler { display: none; }
+.navbar-collapse { display: block !important; flex: 1; }
+.navbar-nav { flex-direction: column; padding: 0; }
+.nav-item { width: 100%; margin-bottom: 0; }
+.nav-link {
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.4rem 1.25rem !important;
+  border-left: 3px solid transparent;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.nav-link:hover { background-color: rgba(255, 255, 255, 0.1); border-left-color: rgba(255, 255, 255, 0.8); }
+.nav-link.active { background-color: rgba(255, 255, 255, 0.15); border-left-color: white; font-weight: 600; }
+#quarto-content { max-width: 1200px; margin-left: var(--sidebar-width); padding: 3rem 3rem 3rem 4rem; }
+.quarto-about-jolla {
+  background: var(--bg-section);
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--primary-color);
+}
+h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+.level4 {
+  background: var(--bg-section);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: var(--shadow-sm);
+}
+a { color: var(--primary-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.footer {
+  background: var(--bg-section);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-left: var(--sidebar-width);
+}
+.nav-footer { max-width: 1200px; margin: 0 auto; padding: 0 3rem 0 4rem; }
+@media (max-width: 992px) {
+  :root { --sidebar-width: 0px; }
+  #quarto-header { width: 100%; height: auto; position: relative; }
+  .navbar-toggler { display: block; margin: 0 1.25rem; }
+  .navbar-collapse { display: none !important; }
+  .navbar-collapse.show { display: block !important; }
+  #quarto-content { margin-left: 0; padding: 2rem 1rem; }
+  .footer { margin-left: 0; }
+  .nav-footer { padding: 0 1rem; }
+}
+</style>
+</head>
+<body>
+<div style="background-color: #f0f0f0; padding: 8px 16px; text-align: center; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+  <span style="font-weight: 600; color: #1a1a1a;">#StandWithUkraine</span>
+  <a href="https://savelife.in.ua/en/donate-en/" target="_blank" rel="noopener noreferrer" style="background-color: #0057b7; color: #ffd700; border: none; padding: 5px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.88rem; white-space: nowrap;">Donate to support Ukraine</a>
+</div>
+<header id="quarto-header">
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html" style="color: white;">Hello, I'm Iegor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./index.html" style="color: white;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./CV_Iegor.pdf" style="color: white;">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#work-in-progress" style="color: white;">Work in Progress</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#scholarships-awards" style="color: white;">Scholarships and Awards</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./publications.html" style="color: white;">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="./conferences.html" style="color: white;">Conferences and Presentations</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#data" style="color: white;">Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#reviewer-service" style="color: white;">Reviewer Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="./teaching.html" style="color: white;">Teaching and Advising</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#community-building" style="color: white;">Community Building</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#personal" style="color: white;">Personal</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  <main class="content" id="quarto-document-content">
+    <div class="quarto-about-jolla content">
+      <section class="level3">
+        <h3>Publications</h3>
+        <section class="level4">
+          <h4>Peer-reviewed Journal Articles</h4>
+          <ol>
+            <li><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/joes.12709">"Central Banks' Support for Climate Action: A Literature Review and Key Issues."</a> <strong>I. Vyshnevskyi</strong> and W. Sohn, <em>Journal of Economic Surveys</em>, Online First in June 2025.</p></li>
+            <li><p><a href="https://linkinghub.elsevier.com/retrieve/pii/S1566014124000165">"The clarity of monetary policy communication and financial market volatility in developing economies."</a> <strong>I. Vyshnevskyi</strong>, W. Jombo, and W. Sohn, <em>Emerging Markets Review, Vol. 59, 101121</em>, Online First in February 2024.</p></li>
+            <li><p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1566014123000742">"Nonperforming Loans and Related Lending: Evidence from Ukraine."</a> <strong>I. Vyshnevskyi</strong> and W. Sohn, <em>Emerging Markets Review, 101069</em>, Online First in September 2023.</p></li>
+            <li><p><a href="http://journal.korfin.org/sub/journal_detail.html?m_menu1=s5&m_menu2=s5_1&code=430529">"The Effect of Supervisory Power and Institutions on Banking Sector Stability in the Post-Crisis Era."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Asian Review of Financial Research, Vol. 36, No. 2., pp. 57-87</em>, May 2023.</p></li>
+            <li><p><a href="https://articlegateway.com/index.php/JAF/article/view/2743">"The effectiveness of financial supervision frameworks."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Journal of Accounting & Finance (2158-3625), 20(1)</em>, January 2020.</p></li>
+            <li><p><a href="https://www.tandfonline.com/doi/abs/10.1080/13504851.2016.1213354">"The 'Twin Peaks' model of post-crisis banking supervision."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Applied Economics Letters, 24(8), 571-574</em>, Online First in July 2016.</p></li>
+          </ol>
+        </section>
+        <section class="level4">
+          <h4>Working Papers</h4>
+          <ol>
+            <li><p><a href="https://crawford.anu.edu.au/sites/default/files/2026-04/25_2026_Baird_Benchimol_Sohn_Vyshnevska_Vyshnevskyi.pdf">"The Monetary Policy Statement Database: An LLM Application to Global Financial Conditions."</a> Cory Baird, Jonathan Benchimol, Wook Sohn, Vira Vyshnevska, and <strong>Iegor Vyshnevskyi</strong>, <em>CAMA Working Paper 25/2026, April 2026.</em></p></li>
+            <li><p><a href="https://www.bis.org/ifc/publ/ifcb67_14.pdf">"The Monetary Policy Statement Database."</a> Cory Baird, Jonathan Benchimol, Wook Sohn, and Vira Vyshnevska, now published in <em>Bank for International Settlements - BIS IFC Bulletin No. 67: Data Science in Central Banking. 2026.</em></p></li>
+            <li><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4150042">"Global post-crisis banking supervision: supervisory powers and institutional changes in the banking sector."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>KDI School of Pub Policy & Management Paper No. 22-01. 2022.</em></p></li>
+          </ol>
+        </section>
+        <section class="level4">
+          <h4>Books</h4>
+          <ol>
+            <li><p><a href="https://www.sciencedirect.com/science/article/abs/pii/B978044313776100129X?via%3Dihub">"Monetary policy communication."</a> W. Sohn and <strong>I. Vyshnevskyi</strong>, <em>Book chapter in: Apergis, Nicholas (ed.) Encyclopedia of Monetary Policy, Financial Markets and Banking. Elsevier. 2025.</em></p></li>
+          </ol>
+        </section>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="nav-footer">
+    <p>&copy; 2026, Iegor Vyshnevskyi</p>
+    <p><a href="./index.html">Back to homepage</a></p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
