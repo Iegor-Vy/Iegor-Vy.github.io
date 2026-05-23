@@ -90,6 +90,63 @@ body {
   display: block;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.support-banner {
+  background-color: #f0f0f0;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.support-banner-label {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.support-banner-link {
+  background-color: #0057b7;
+  color: #ffd700;
+  border: none;
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.sidebar-link,
+.sidebar-link:hover,
+.sidebar-link:focus-visible,
+.sidebar-brand,
+.sidebar-brand:hover,
+.sidebar-brand:focus-visible {
+  color: #ffffff;
+}
+
 .navbar-toggler {
   display: none;
 }
@@ -125,6 +182,16 @@ body {
   border-left-color: rgba(255, 255, 255, 0.8);
 }
 
+.nav-link:focus-visible,
+.navbar-brand:focus-visible,
+.about-link:focus-visible,
+a:focus-visible,
+.toc-action:focus-visible,
+.navbar-toggler:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+
 .nav-link.active {
   background-color: rgba(255, 255, 255, 0.15);
   border-left-color: white;
@@ -146,6 +213,7 @@ body {
   margin-bottom: 3rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
+  max-width: 1000px;
 }
 
 .hero-header {
@@ -195,6 +263,16 @@ body {
   letter-spacing: -0.02em;
 }
 
+.hero-contact h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
 .hero-contact ul {
   list-style: none;
   padding: 0;
@@ -227,7 +305,8 @@ body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-medium);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 78ch;
 }
 
 #hero-heading p:last-child {
@@ -251,7 +330,7 @@ h3 {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
   border-bottom: 3px solid var(--primary-color);
@@ -332,6 +411,38 @@ ol li em {
 
 .level4 ul li {
   margin-bottom: 0.75rem;
+}
+
+.at-a-glance {
+  background: #f3f8f5;
+  border: 1px solid #d9e9e0;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.at-a-glance h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  margin: 0 0 0.6rem;
+  color: var(--primary-dark);
+}
+
+.at-a-glance ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.at-a-glance li {
+  margin-bottom: 0.45rem;
+  line-height: 1.5;
+  color: var(--text-medium);
+}
+
+.reviewer-list {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 /* About Links */
@@ -542,6 +653,10 @@ ol li em {
   .hero-contact h2 {
     font-size: 1.75rem;
   }
+
+  .hero-contact h1 {
+    font-size: 1.75rem;
+  }
   
   h3 {
     font-size: 1.5rem;
@@ -577,6 +692,23 @@ ol li em {
   
   .footer-items {
     justify-content: center;
+  }
+
+  .reviewer-list {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -623,11 +755,12 @@ h3 {
 
 <body>
 
+<a class="skip-link" href="#quarto-document-content">Skip to main content</a>
+
 <!-- Ukraine Support Banner -->
-<div style="background-color: #f0f0f0; padding: 8px 16px; text-align: center; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
-  <span style="font-weight: 600; color: #1a1a1a;">#StandWithUkraine</span>
-  <a href="https://savelife.in.ua/en/donate-en/" target="_blank" rel="noopener noreferrer"
-     style="background-color: #0057b7; color: #ffd700; border: none; padding: 5px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.88rem; white-space: nowrap;">
+<div class="support-banner">
+  <span class="support-banner-label">#StandWithUkraine</span>
+  <a href="https://savelife.in.ua/en/donate-en/" target="_blank" rel="noopener noreferrer" class="support-banner-link">
     Donate to support Ukraine
   </a>
 </div>
@@ -636,7 +769,7 @@ h3 {
 <header id="quarto-header">
   <nav class="navbar navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html" style="color: white;">Hello, I'm Iegor</a>
+      <a class="navbar-brand sidebar-brand" href="./index.html">Hello, I'm Iegor</a>
   
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
               data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -646,17 +779,17 @@ h3 {
   
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="./index.html" style="color: white;">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./CV_Iegor.pdf" style="color: white;">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work-in-progress" style="color: white;">Work in Progress</a></li>
-          <li class="nav-item"><a class="nav-link" href="#scholarships-awards" style="color: white;">Scholarships and Awards</a></li>
-          <li class="nav-item"><a class="nav-link" href="./publications.html" style="color: white;">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="./conferences.html" style="color: white;">Conferences and Presentations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#data" style="color: white;">Data</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reviewer-service" style="color: white;">Reviewer Service</a></li>
-          <li class="nav-item"><a class="nav-link" href="./teaching.html" style="color: white;">Teaching and Advising</a></li>
-          <li class="nav-item"><a class="nav-link" href="#community-building" style="color: white;">Community Building</a></li>
-          <li class="nav-item"><a class="nav-link" href="#personal" style="color: white;">Personal</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="./CV_Iegor.pdf">CV</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="#work-in-progress">Work in Progress</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="#scholarships-awards">Scholarships and Awards</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="./publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="./conferences.html">Conferences and Presentations</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="#data">Data</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="#reviewer-service">Reviewer Service</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="./teaching.html">Teaching and Advising</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="#community-building">Community Building</a></li>
+          <li class="nav-item"><a class="nav-link sidebar-link" href="#personal">Personal</a></li>
         </ul>
       </div>
     </div>
@@ -676,7 +809,7 @@ h3 {
         </div>
 
         <div class="hero-contact">
-          <h2>Iegor Vyshnevskyi</h2>
+          <h1>Iegor Vyshnevskyi</h1>
           <ul>
             <li><i class="bi bi-envelope"></i> <a href="mailto:ievysh@sogang.ac.kr">ievysh@sogang.ac.kr</a></li>
             <li><i class="bi bi-file-earmark-text"></i> <a href="./CV_Iegor.pdf">CV</a></li>
@@ -688,13 +821,21 @@ h3 {
       </div>
       
       <div id="hero-heading">
-        <p>I am an Assistant Professor of International Commerce at Sogang University, where I teach courses in international economics, macroeconomics, and finance. My academic background includes a Ph.D. in Public Policy with a specialization in <a href="https://archives.kdischool.ac.kr/handle/11125/46582">banking and central banking</a> from the KDI School of Public Policy and Management. Previously, I served as an Assistant Professor of Economics at Woosong University, where I taught economics, research, and data science courses while mentoring students.</p>
-        
-        <p>My research focuses on central banking, financial stability, and banking supervision, with a particular interest in nonperforming loans, monetary policy communication, and sustainable central banking.</p>
-        
-        <p>Before transitioning to academia, I worked as a financial analyst at the National Bank of Ukraine, where I conducted financial modeling, risk analysis, and policy development. My expertise includes bank stress testing, financial analysis, and policy development. I have published research in reputable academic journals, contributing to discussions on banking regulation, credit risk, and monetary policy communication.</p>
-        
-        <p>Beyond research, I am passionate about integrating data science into economics and finance. I taught students how to apply programming languages such as R and Python to analyze economic and financial data, and promote data-driven decision-making. I am also actively engaged in bridging the gap between research and policy by developing analytical tools for macroeconomic and financial analysis.</p>
+        <p>I am an Assistant Professor of International Commerce at Sogang University. I hold a Ph.D. in Public Policy (specialization in <a href="https://archives.kdischool.ac.kr/handle/11125/46582">banking and central banking</a>) from the KDI School of Public Policy and Management, and previously served as an Assistant Professor of Economics at Woosong University.</p>
+
+        <div class="at-a-glance">
+          <h2>At a Glance</h2>
+          <ul>
+            <li><strong>Research:</strong> central banking, financial stability, supervision, and monetary policy communication.</li>
+            <li><strong>Methods:</strong> applied econometrics, text analysis, and policy-oriented data science.</li>
+            <li><strong>Teaching:</strong> international economics, macroeconomics, finance, and analytics.</li>
+            <li><strong>Background:</strong> former financial analyst at the National Bank of Ukraine.</li>
+          </ul>
+        </div>
+
+        <p>My work focuses on how central bank communication and institutional design shape financial market outcomes. Recent projects study nonperforming loans, information effects in monetary policy, and communication during periods of political and macro-financial stress.</p>
+
+        <p>Alongside research, I develop data resources and teach students to use tools such as R and Python for empirical economic analysis and policy-relevant decision-making.</p>
       </div>
 
       <section id="work-in-progress" class="level3">
@@ -799,7 +940,7 @@ h3 {
         <h3>Conferences and Presentations</h3>
         <section class="level4">
           <h4>Latest Presentation</h4>
-          <p><strong>Monetary Policy Communication in Times of War and Political Turmoil: Evidence from Emerging and Developing Economies</strong>, CEBRA 2026 Annual Meeting.</p>
+          <p><strong>Monetary Policy Communication in Times of War and Political Turmoil: Evidence from Emerging and Developing Economies</strong>, presented at the CEBRA 2026 Annual Meeting.</p>
           <p><a href="./conferences.html"><strong>View full conferences and presentations</strong></a></p>
         </section>
       </section>
@@ -818,7 +959,7 @@ h3 {
       <section id="reviewer-service" class="level3">
         <h3>Reviewer Service</h3>
         <p>I serve as a peer reviewer for leading academic journals in economics, finance, and environmental policy, including:</p>
-        <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+        <ul class="reviewer-list">
           <li>Climate Policy</li>
           <li>International Finance</li>
           <li>International Review of Economics & Finance</li>
@@ -910,6 +1051,13 @@ h3 {
 document.addEventListener('DOMContentLoaded', function() {
   const sections = document.querySelectorAll('section.level3, .quarto-about-jolla');
   const navLinks = document.querySelectorAll('.nav-link');
+
+  function clearActiveState() {
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    });
+  }
   
   // Create a map of section IDs to nav links
   const navMap = new Map();
@@ -955,15 +1103,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Update active class on nav links
-    navLinks.forEach(link => link.classList.remove('active'));
+    clearActiveState();
     
     const activeLink = navMap.get(currentSection);
     if (activeLink) {
       activeLink.classList.add('active');
+      activeLink.setAttribute('aria-current', 'location');
     } else {
       // Default to home if no section matches
       const homeLink = navMap.get('home');
-      if (homeLink) homeLink.classList.add('active');
+      if (homeLink) {
+        homeLink.classList.add('active');
+        homeLink.setAttribute('aria-current', 'location');
+      }
     }
   }
   
@@ -989,10 +1141,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetId = href.substring(1);
         
         // Remove active from all
-        navLinks.forEach(l => l.classList.remove('active'));
+        clearActiveState();
         
         // Add active to clicked link immediately
         this.classList.add('active');
+        this.setAttribute('aria-current', 'location');
         
         // Then update after scroll completes
         setTimeout(setActiveNav, 500);
