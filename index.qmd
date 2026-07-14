@@ -1,6 +1,6 @@
 ---
 title: "Iegor Vyshnevskyi"
-image: new-photo.jpg"
+image: assets/images/new-photo.jpg
 page-layout: article
 format: 
   html:
@@ -18,7 +18,7 @@ about:
       href: mailto:ievysh@sogang.ac.kr
     - icon: CV
       text: CV
-      href: https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/CV_Iegor.pdf
+      href: assets/documents/cv/CV_Iegor.pdf
     - icon: google
       text: Google scholar
       href: https://scholar.google.com/citations?hl=en&user=4Kcp5WoAAAAJ     
@@ -36,5 +36,5 @@ Before transitioning to academia, I worked as a financial analyst at the Nationa
 
 Beyond research, I am passionate about integrating data science into economics and finance. I taught students how to apply programming languages such as R and Python to analyze economic and financial data, and promoting data-driven decision-making. I am also actively engaged in bridging the gap between research and policy by developing analytical tools for macroeconomic and financial analysis.
 
-You can reach me at [ievysh@sogang.ac.kr](mailto:ievysh@sogang.ac.kr). Here is a [link](https://github.com/Iegor-Vy/Iegor-Vyshnevskyi.github.io/CV_Iegor.pdf) to my CV.
+You can reach me at [ievysh@sogang.ac.kr](mailto:ievysh@sogang.ac.kr). Here is a [link](assets/documents/cv/CV_Iegor.pdf) to my CV.
 :::
